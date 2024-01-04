@@ -15,6 +15,29 @@
             background: linear-gradient(to right, rgb(155, 204, 235), rgb(209, 161, 225));
             padding: 0;
             margin: 0;
+
+        }
+
+        header {
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 1200px;
+            /* Ajusta este valor según tus necesidades */
+            margin: auto;
+            /* Esto centrará el contenido principal */
+        }
+
+        video {
+            width: 50%;
+            /* Ajusta el tamaño del video según lo necesites */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         ul {
@@ -37,6 +60,13 @@
             text-decoration: none;
         }
 
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #92a4ff;
+        }
 
         h1 {
             background-color: black;
@@ -66,11 +96,11 @@
 
 
         .article {
-            float: left;
             width: 70%;
             background-color: #e2eff6;
             padding: 10px;
-            margin: 10px;
+            margin: 10px auto;
+            /* Margen superior e inferior de 10px y márgenes automáticos a los lados */
             border: 1px solid #CCC;
         }
 
@@ -103,28 +133,32 @@
 
         <article class="article">
             <h2>Spicy Beef & Gnocchi</h2>
-            <img class="images" src="assets/images/spicyBeef&Gnocchi.jpg" alt="Plump gnocchi, ground beef, and tender zucchini get a delicious kick from Calabrian chile paste">
+            <img class="images" src="assets/images/spicyBeef&Gnocchi.jpg"
+                alt="Plump gnocchi, ground beef, and tender zucchini get a delicious kick from Calabrian chile paste">
             <p>Plump gnocchi, ground beef, and tender zucchini get a delicious kick from Calabrian chile paste, a
                 specialty
                 ingredient from southern Italy known for its irresistibly sweet-hot flavor.</p>
         </article>
         <article class="article">
             <h2>Pad Thai</h2>
-            <img class="images" src="assets/images/padThai.jpg" alt="Pad Thai is stir-fry dish made with rice noodles, shrimp, chicken, or tofu, peanuts, a scrambled egg">
+            <img class="images" src="assets/images/padThai.jpg"
+                alt="Pad Thai is stir-fry dish made with rice noodles, shrimp, chicken, or tofu, peanuts, a scrambled egg">
             <p>Pad Thai is stir-fry dish made with rice noodles, shrimp, chicken, or tofu, peanuts, a scrambled egg and
                 bean sprouts. The ingredients are sautéed together in a wok and tossed in a delicious pad thai sauce.
             </p>
         </article>
         <article class="article">
             <h2>Shepherd's Pie</h2>
-            <img class="images" src="assets/images/ysacShepherdsPie.jpg" alt="Shepherd's Pie, Cottage Pie, or Hachis Parmentier is a meat pie consisting of cooked minced meat topped">
+            <img class="images" src="assets/images/ysacShepherdsPie.jpg"
+                alt="Shepherd's Pie, Cottage Pie, or Hachis Parmentier is a meat pie consisting of cooked minced meat topped">
             <p>Shepherd's Pie, Cottage Pie, or Hachis Parmentier is a meat pie consisting of cooked minced meat topped
                 with mashed potato. This dish originated from the United Kingdom, and is traditionally made with lamb or
                 mutton.</p>
         </article>
         <article class="article">
             <h2>Firecracker Meatballs</h2>
-            <img class="images" src="assets/images/firecrackerMeatballs.jpg" alt="This recipe is here to blow up everything you think you know about meatballs.">
+            <img class="images" src="assets/images/firecrackerMeatballs.jpg"
+                alt="This recipe is here to blow up everything you think you know about meatballs.">
             <p>This recipe is here to blow up everything you think you know about meatballs. All dramatics aside, these
                 meatballs are truly game-changing thanks to a certain onomatopoeic sauce.</p>
         </article>
