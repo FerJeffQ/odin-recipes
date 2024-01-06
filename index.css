@@ -1,101 +1,102 @@
 body {
-    font-family: "Lucida Console", "Courier New", monospace;
-    background: linear-gradient(to right, rgb(155, 204, 235), rgb(209, 161, 225));
-    padding: 0;
-    margin: 0;
-
-}
-
-header {
-    text-align: center;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 1200px;
-    /* Ajusta este valor según tus necesidades */
-    margin: auto;
-    /* Esto centrará el contenido principal */
-}
-
-video {
-    width: 50%;
-    /* Ajusta el tamaño del video según lo necesites */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover:not(.active) {
-    background-color: #111;
-}
-
-.active {
-    background-color: #92a4ff;
+    font-family: Arial, sans-serif;
 }
 
 h1 {
-    background-color: black;
-    padding: 10px;
-    margin: 0;
-    color: #92a4ff;
-}
-
-h2 {
-    font-size: 24px;
-    margin: 0;
-    padding: 0;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-.images {
-    float: right;
-    margin: 0 0 20px 20px;
-    max-width: 25%;
-    height: auto;
-}
-
-
-.article {
-    width: 70%;
-    background-color: #e2eff6;
-    padding: 10px;
-    margin: 10px auto;
-    /* Margen superior e inferior de 10px y márgenes automáticos a los lados */
-    border: 1px solid #CCC;
-}
-
-.footer {
-    background-color: #333;
-    color: #FFF;
-    padding: 10px;
     text-align: center;
-    clear: both;
+    margin-top: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-rows: repeat(2, 1fr);    /* 2 filas */
+    gap: 20px;                             /* Espacio entre los elementos */
+    padding: 20px;
+}
+
+.video-container {
+    grid-row: 1;          /* Fila 1 */
+    grid-column: 2;       /* Columna 2 */
+}
+
+.article_1 {
+    grid-row: 1;          /* Fila 1 */
+    grid-column: 1;       /* Columna 1 */
+}
+
+.article_2 {
+    grid-row: 1;          /* Fila 1 */
+    grid-column: 3;       /* Columna 3 */
+}
+
+.article_3 {
+    grid-row: 2;          /* Fila 2 */
+    grid-column: 1;       /* Columna 1 */
+}
+
+.article_4 {
+    grid-row: 2;          /* Fila 2 */
+    grid-column: 3;       /* Columna 3 */
+}
+
+.project-author {
+    grid-row: 2;          /* Fila 2 */
+    grid-column: 2;       /* Columna 2 */
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+/* ... (El resto de tu CSS sigue igual) ... */
+
+.image-container {
+    position: relative; /* Establece la posición relativa para los elementos hijos absolutos */
+    overflow: hidden;   /* Asegura que el texto no se desborde del contenedor */
+}
+
+.overlay {
+    position: absolute; /* Establece la posición absoluta para colocar encima de la imagen */
+    bottom: 0;          /* Coloca el overlay en la parte inferior */
+    left: 0;            /* Coloca el overlay en la parte izquierda */
+    right: 0;           /* Coloca el overlay en la parte derecha */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para el overlay */
+    color: #fff;        /* Color de texto blanco para el overlay */
+    padding: 10px;      /* Espaciado interno para el texto dentro del overlay */
+    transition: 0.3s;   /* Transición suave para efectos si los deseas */
+}
+
+.overlay h2,
+.overlay p {
+    margin: 0;          /* Elimina el margen predeterminado */
+}
+
+
+
+/* ... (El resto de tu CSS) ... */
+
+/* Agregar una transición suave para el efecto de escala */
+.article_1,
+.article_2,
+.article_3,
+.article_4 {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Al pasar el mouse sobre los artículos, aumenta su escala */
+.article_1:hover,
+.article_2:hover,
+.article_3:hover,
+.article_4:hover {
+    transform: scale(1.05); /* Aumenta la escala al 105% */
+}
+
+/* Estilos adicionales para asegurarse de que los artículos no se desborden */
+.article_1,
+.article_2,
+.article_3,
+.article_4 {
+    overflow: hidden;
 }
