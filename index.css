@@ -99,7 +99,7 @@ h2 {
     bottom: 0;          /* Coloca el overlay en la parte inferior */
     left: 0;            /* Coloca el overlay en la parte izquierda */
     right: 0;           /* Coloca el overlay en la parte derecha */
-    background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente para el overlay */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para el overlay */
     color: #fff;        /* Color de texto blanco para el overlay */
     padding: 20px;      /* Espaciado interno para el texto dentro del overlay */
     transition: 1.5s;   /* Transición suave para efectos si los deseas */
