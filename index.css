@@ -148,7 +148,7 @@ h2 {
 /* Estilo para el SVG */
 .project-author svg {
     /* Modificar el tamaño del SVG */
-    width: 650px; /* Ancho del SVG */
+    width: 450px; /* Ancho del SVG */
     height: auto; /* Altura automática para mantener la proporción */
     
     /* Modificar la posición del SVG */
