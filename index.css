@@ -227,29 +227,28 @@ a {
 /* Aplica la animación a cada elemento con un retardo diferente para mostrarlos uno a uno */
 
 .video-container {
-    animation: fadeIn 1s forwards 0.1s; /* Retardo de 3s */
+    animation: fadeIn 1s forwards 0.1s; /* Retardo de s */
 }
 
 .article_1 {
-    animation: fadeIn 1s forwards 0.2s; /* Retardo de 0.5s */
+    animation: fadeIn 1s forwards 0.3s; /* Retardo de s */
 }
 
 .article_2 {
-    animation: fadeIn 1s forwards 0.2s; /* Retardo de 1s */
+    animation: fadeIn 1s forwards 0.5s; /* Retardo de s */
 }
 
 .article_3 {
-    animation: fadeIn 1s forwards 0.5s; /* Retardo de 1.5s */
+    animation: fadeIn 1s forwards 0.7s; /* Retardo de s */
 }
 
 .article_4 {
-    animation: fadeIn 1s forwards 0.5s; /* Retardo de 2s */
+    animation: fadeIn 1s forwards 0.9s; /* Retardo de s */
 }
 
 .project-author {
-    animation: fadeIn 1s forwards 0.7s; /* Retardo de 2.5s */
+    animation: fadeIn 1s forwards 0.1s; /* Retardo de s */
 }
 
 
 
-/* ... (El resto de tu CSS sigue igual) ... */
