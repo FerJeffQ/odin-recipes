@@ -1,10 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: rgb(180,131,58);
+    background: linear-gradient(90deg, rgba(180,131,58,1) 0%, rgba(226,187,40,1) 50%, rgba(180,131,58,1) 100%);
 }
 
 h1 {
     text-align: center;
     margin-top: 20px;
+    font-size: 2.5em;
 }
 
 main {
@@ -47,8 +50,17 @@ main {
     margin-top: 20px;
 }
 
+h2 {
+    padding: 10px;
+}
 
-
+.images {
+    width: 40vh;
+    height: 30vh;    
+    object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo su relación de aspecto */
+    border-radius: 90%; /* Establece un radio de borde del 50% para hacerlo ovalado */
+    border: 2px solid #ccc; /* Añade un borde de 2px sólido con color gris claro */
+}
 
 /* ... (El resto de tu CSS sigue igual) ... */
 
@@ -73,9 +85,13 @@ main {
     margin: 0;          /* Elimina el margen predeterminado */
 }
 
+.video-container video {
+    border: 8px solid rgba(27, 25, 25, 0.2); /* Borde blanco semi-transparente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);   /* Sombreado negro semi-transparente */
+}
 
 
-/* ... (El resto de tu CSS) ... */
+
 
 /* Agregar una transición suave para el efecto de escala */
 .article_1,
@@ -99,4 +115,76 @@ main {
 .article_3,
 .article_4 {
     overflow: hidden;
+}
+
+.project-author p {
+    font-size: 1.5em;
+}
+
+@keyframes scaleAnimation {
+    0% {
+      transform: scale(1);  /* Escala normal */
+    }
+    50% {
+      transform: scale(1.1);  /* Escala más grande */
+    }
+    100% {
+      transform: scale(1);  /* Escala normal nuevamente */
+    }
+  }
+  
+  .scale-animation {
+    animation: scaleAnimation 3s infinite alternate; /* 3s es la duración y 'alternate' hace que la animación se invierta en cada iteración */
+  }
+  
+  /* Estilo para el contenedor */
+.project-author {
+    /* Ajusta el tamaño y la posición del contenedor según sea necesario */
+    width: 100%; /* Ancho completo del contenedor */
+    text-align: center; /* Centrar el contenido */
+    padding: 20px; /* Espacio alrededor del contenedor */
+}
+
+/* Estilo para el SVG */
+.project-author svg {
+    /* Modificar el tamaño del SVG */
+    width: 650px; /* Ancho del SVG */
+    height: auto; /* Altura automática para mantener la proporción */
+    
+    /* Modificar la posición del SVG */
+    margin-top: 20px; /* Espacio superior */
+    margin-bottom: 20px; /* Espacio inferior */
+    margin-left: auto; /* Centrar horizontalmente */
+    margin-right: auto; /* Centrar horizontalmente */
+    
+    /* Otros estilos si es necesario */
+    display: block; /* Hacer que el SVG sea un bloque */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Media query para pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 16px; /* Por ejemplo, puedes reducir el tamaño de fuente para pantallas más pequeñas */
+    }
+
+    main {
+        grid-template-columns: 1fr; /* Un solo columna para dispositivos móviles */
+        gap: 10px; /* Reducir el espacio entre los elementos */
+    }
+
+    .video-container,
+    .article_1,
+    .article_2,
+    .article_3,
+    .article_4,
+    .project-author {
+        grid-column: 1; /* Asegurarse de que todos los elementos ocupen toda la anchura en dispositivos móviles */
+        grid-row: auto; /* Reajustar la ubicación si es necesario */
+    }
+
+    /* Aquí puedes continuar ajustando estilos específicos para pantallas más pequeñas */
 }
