@@ -2,6 +2,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: rgb(180,131,58);
     background: linear-gradient(90deg, rgba(180,131,58,1) 0%, rgba(226,187,40,1) 50%, rgba(180,131,58,1) 100%);
+    
 }
 
 @font-face {
@@ -19,11 +20,12 @@ h1 {
 }
 
 main {
+    
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas */
     grid-template-rows: repeat(2, 1fr);    /* 2 filas */
     gap: 20px;                             /* Espacio entre los elementos */
-    padding: 20px;
+    padding: 10px;
 }
 
 .video-container {
@@ -82,20 +84,24 @@ h2 {
     bottom: 0;          /* Coloca el overlay en la parte inferior */
     left: 0;            /* Coloca el overlay en la parte izquierda */
     right: 0;           /* Coloca el overlay en la parte derecha */
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para el overlay */
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente para el overlay */
     color: #fff;        /* Color de texto blanco para el overlay */
-    padding: 10px;      /* Espaciado interno para el texto dentro del overlay */
-    transition: 0.3s;   /* Transición suave para efectos si los deseas */
+    padding: 20px;      /* Espaciado interno para el texto dentro del overlay */
+    transition: 1.5s;   /* Transición suave para efectos si los deseas */
+    text-align: center;
 }
 
 .overlay h2,
 .overlay p {
-    margin: 0;          /* Elimina el margen predeterminado */
+    margin: 0px;          /* Elimina el margen predeterminado */
 }
 
 .video-container video {
     border: 8px solid rgba(27, 25, 25, 0.2); /* Borde blanco semi-transparente */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);   /* Sombreado negro semi-transparente */
+    padding: 0;
+    margin: 0;
+    width: 70vh;
 }
 
 
@@ -144,6 +150,7 @@ h2 {
   .scale-animation {
     animation: scaleAnimation 3s infinite alternate; /* 3s es la duración y 'alternate' hace que la animación se invierta en cada iteración */
   }
+
   
   /* Estilo para el contenedor */
 .project-author {
@@ -195,3 +202,54 @@ a {
     }
 }
 
+/* ... (El resto de tu CSS se mantiene igual) ... */
+
+/* Inicialmente, establece la opacidad de los elementos a 0 */
+.article_1,
+.article_2,
+.article_3,
+.article_4,
+.project-author,
+.video-container {
+    opacity: 0;
+}
+
+/* Animación para mostrar los elementos */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Comienza con una opacidad de 0 */
+    }
+    100% {
+        opacity: 1; /* Finaliza con una opacidad de 1 */
+    }
+}
+
+/* Aplica la animación a cada elemento con un retardo diferente para mostrarlos uno a uno */
+
+.video-container {
+    animation: fadeIn 1s forwards 0.1s; /* Retardo de 3s */
+}
+
+.article_1 {
+    animation: fadeIn 1s forwards 0.2s; /* Retardo de 0.5s */
+}
+
+.article_2 {
+    animation: fadeIn 1s forwards 0.2s; /* Retardo de 1s */
+}
+
+.article_3 {
+    animation: fadeIn 1s forwards 0.5s; /* Retardo de 1.5s */
+}
+
+.article_4 {
+    animation: fadeIn 1s forwards 0.5s; /* Retardo de 2s */
+}
+
+.project-author {
+    animation: fadeIn 1s forwards 0.7s; /* Retardo de 2.5s */
+}
+
+
+
+/* ... (El resto de tu CSS sigue igual) ... */
