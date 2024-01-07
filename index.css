@@ -2,7 +2,8 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: rgb(180,131,58);
     background: linear-gradient(90deg, rgba(180,131,58,1) 0%, rgba(226,187,40,1) 50%, rgba(180,131,58,1) 100%);
-    
+    padding: 0;
+    margin: 0;
 }
 
 @font-face {
@@ -13,10 +14,14 @@ body {
 
 h1 {
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     font-size: 4em;
     font-family: 'Norse', sans-serif; /* Fallback a una fuente sans-serif por defecto si Norse no está disponible */
+    background-color: black;
+    padding: 5px;
+    margin: 0;
+    color: aliceblue;
 }
 
 main {
@@ -25,7 +30,7 @@ main {
     grid-template-columns: repeat(3, 1fr); /* 3 columnas */
     grid-template-rows: repeat(2, 1fr);    /* 2 filas */
     gap: 20px;                             /* Espacio entre los elementos */
-    padding: 10px;
+    padding: 20px;
 }
 
 .video-container {
@@ -53,26 +58,36 @@ main {
     grid-column: 3;       /* Columna 3 */
 }
 
+article_1,
+.article_1,
+.article_2,
+.article_3,
+.article_4 {
+    width: 90%;  /* Reduzco el ancho al 80% del contenedor */
+    height: 90%; /* Reduzco la altura al 80% del contenedor */
+    padding: 20px; /* Reduzco el padding para que ocupe menos espacio */
+}
+
 .project-author {
     grid-row: 2;          /* Fila 2 */
     grid-column: 2;       /* Columna 2 */
-    text-align: center;
-    margin-top: 20px;
+    text-align: center;    
+    padding-top: 100px;
 }
 
 h2 {
-    padding: 10px;
+    padding: 5px;
 }
 
 .images {
-    width: 40vh;
+    width: 80%;
     height: 30vh;    
-    object-fit: cover; /* Ajusta el tamaño de la imagen manteniendo su relación de aspecto */
+    
     border-radius: 90%; /* Establece un radio de borde del 50% para hacerlo ovalado */
     border: 2px solid #ccc; /* Añade un borde de 2px sólido con color gris claro */
 }
 
-/* ... (El resto de tu CSS sigue igual) ... */
+
 
 .image-container {
     position: relative; /* Establece la posición relativa para los elementos hijos absolutos */
@@ -89,11 +104,14 @@ h2 {
     padding: 20px;      /* Espaciado interno para el texto dentro del overlay */
     transition: 1.5s;   /* Transición suave para efectos si los deseas */
     text-align: center;
+    height: 35%;
+    font-size: 0.9vw;
 }
 
 .overlay h2,
 .overlay p {
     margin: 0px;          /* Elimina el margen predeterminado */
+    
 }
 
 .video-container video {
@@ -101,7 +119,8 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);   /* Sombreado negro semi-transparente */
     padding: 0;
     margin: 0;
-    width: 70vh;
+    width: 100%;
+    height: auto;
 }
 
 
@@ -129,10 +148,13 @@ h2 {
 .article_3,
 .article_4 {
     overflow: hidden;
+    
 }
 
+
+
 .project-author p {
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 @keyframes scaleAnimation {
@@ -157,52 +179,30 @@ h2 {
     /* Ajusta el tamaño y la posición del contenedor según sea necesario */
     width: 100%; /* Ancho completo del contenedor */
     text-align: center; /* Centrar el contenido */
-    padding: 20px; /* Espacio alrededor del contenedor */
+ 
 }
 
 /* Estilo para el SVG */
 .project-author svg {
     /* Modificar el tamaño del SVG */
-    width: 350px; /* Ancho del SVG */
+    width: 50%; /* Ancho del SVG */
     height: auto; /* Altura automática para mantener la proporción */
     
     /* Modificar la posición del SVG */
-    margin-top: 20px; /* Espacio superior */
-    margin-bottom: 20px; /* Espacio inferior */
+    margin-top: 50px; /* Espacio superior */
+    margin-bottom: 0px; /* Espacio inferior */
     margin-left: auto; /* Centrar horizontalmente */
     margin-right: auto; /* Centrar horizontalmente */
     
     /* Otros estilos si es necesario */
     display: block; /* Hacer que el SVG sea un bloque */
+    padding: 0;
+    
 }
 
 a {
     text-decoration: none;
 }
-
-/* Media query para pantallas más pequeñas */
-@media only screen and (max-width: 768px) {
-    body {
-        font-size: 16px; /* Por ejemplo, puedes reducir el tamaño de fuente para pantallas más pequeñas */
-    }
-
-    main {
-        grid-template-columns: 1fr; /* Un solo columna para dispositivos móviles */
-        gap: 10px; /* Reducir el espacio entre los elementos */
-    }
-
-    .video-container,
-    .article_1,
-    .article_2,
-    .article_3,
-    .article_4,
-    .project-author {
-        grid-column: 1; /* Asegurarse de que todos los elementos ocupen toda la anchura en dispositivos móviles */
-        grid-row: auto; /* Reajustar la ubicación si es necesario */
-    }
-}
-
-
 
 /* Inicialmente, establece la opacidad de los elementos a 0 */
 .article_1,
@@ -252,3 +252,32 @@ a {
 
 
 
+/* Media query para pantallas más pequeñas */
+@media only screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        grid-template-columns: 1fr; /* Un solo columna para dispositivos móviles */
+        gap: 20px; /* Reducir el espacio entre los elementos */
+        
+    }
+
+    .overlay {
+        font-size: 1.8vh;
+    }
+    
+    .video-container,
+    .article_1,
+    .article_2,
+    .article_3,
+    .article_4,
+    .project-author {
+        grid-column: 1; /* Asegurarse de que todos los elementos ocupen toda la anchura en dispositivos móviles */
+        grid-row: auto; /* Reajustar la ubicación si es necesario */
+        width: 90%;
+        
+    }
+}
